@@ -20,6 +20,8 @@
       }
       body{
           background-color: var(--fondo);
+          transition: 1s;
+
       }
 
       h1{
@@ -30,7 +32,7 @@
           height: 20px;
       }
       
-      label {
+      .sw_dark_mode_label {
         margin: 0 auto;
         margin-top: 40vh;
         display: block;
@@ -44,7 +46,7 @@
         cursor: pointer;
         user-select: none;
       }
-      label::before {
+      .sw_dark_mode_label::before {
         content: "";
         display: block;
         width: 80px;
@@ -56,11 +58,11 @@
         box-shadow: inset 0 0 15px 10px #ffed9d ;
         
       }
-      input {
+      .sw_dark_mode_input {
         display: none;
       }
 
-      input:checked ~ label::before {
+      .sw_dark_mode_input:checked ~ .sw_dark_mode_label::before {
         background-image: url("assets/moonIcon.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -107,8 +109,9 @@
     </header>
 
     <main>
-      <input type="checkbox" name="" id="checkbox" />
-      <label for="checkbox"></label>
+
+      <input class="sw_dark_mode_input" type="checkbox" name="" id="checkbox" />
+      <label class="sw_dark_mode_label"for="checkbox"></label>
 
       <div class="imagen"></div>
     </main>
@@ -116,7 +119,7 @@
     <footer></footer>
 
     <script>
-        let checkbox = document.querySelector('input')
+        let checkbox = document.querySelector('.sw_dark_mode_input')
         
         checkbox.addEventListener('change',function(event){
             console.log(this.checked)
