@@ -9,103 +9,67 @@
 
       :root {
           --fondo: white;
-          --text-color: black;
-          --copito: url("assets/feliz.jpeg");
       }
 
       * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
       }
       body{
           background-color: var(--fondo);
           transition: 1s;
 
       }
-
-      h1{
-          text-align: center;
-          color: var(--text-color);
-          font-family: sans-serif;
-          margin-top: 15px;
-          height: 20px;
-      }
       
       .sw_dark_mode_label {
         margin: 0 auto;
-        margin-top: 40vh;
+        margin-top: calc(50vh - 13px);
         display: block;
-        width: 250px;
-        height: 100px;
+        width: 50px;
+        height: 26px;
         background-color: rgb(53, 53, 53);
         border-radius: 50px;
-        padding-top: 9px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
         cursor: pointer;
         user-select: none;
       }
       .sw_dark_mode_label::before {
         content: "";
         display: block;
-        width: 80px;
-        height: 80px;
+        height: 16px;
+        width: 16px;
         background-color: #ecc722;
         border-radius: 50%;
         transition: 1s;
-        /* will-change: tranform;*/
-        box-shadow: inset 0 0 15px 10px #ffed9d ;
-        
+        will-change: tranform;    
       }
       .sw_dark_mode_input {
         display: none;
       }
 
       .sw_dark_mode_input:checked ~ .sw_dark_mode_label::before {
-        background-image: url("assets/moonIcon.png");
-        background-position: center;
+        background-image: url("assets/iconmoon2.PNG");
+        background-position: center; 
         background-repeat: no-repeat;
-        background-size: cover;
-        transform: translateX(148px);
-        border: 1px solid #ddd;
-        box-shadow: inset 0 0 15px 10px #2b2b2b ;
+        background-size: cover; 
+        transform: translateX(24px);
+        
       }
 
       .dark-mode{
         --fondo: #222;
-        --text-color:#ddd;
-        --copito: url("assets/triste.jpeg");
       }
       .light-mode{
         --fondo: #ddd;
-        --text-color:dark;
-        --copito: url("assets/feliz.jpeg");
-      }
-
-      .imagen{
-          margin: 0 auto;
-          width: 300px;
-          height: 500px;
-          background-image: var(--copito);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: 1s;
-
       }
 
     </style>
   </head>
   <body>
     <header>
-      <h1>
-        <!-- Todo el credito es de
-        <a href="https://www.youtube.com/channel/UCLsSfk2x6p3XvlknDi39zCQ"
-          >Leonidas Esteban</a
-        > -->
-        Realizado con amor, por Cesar Guevara.
-      </h1>
     </header>
 
     <main>
@@ -113,7 +77,6 @@
       <input class="sw_dark_mode_input" type="checkbox" name="" id="checkbox" />
       <label class="sw_dark_mode_label"for="checkbox"></label>
 
-      <div class="imagen"></div>
     </main>
 
     <footer></footer>
